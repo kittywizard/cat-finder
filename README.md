@@ -1,1 +1,1 @@
-# cat-finder
+Cat Finder

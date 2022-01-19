@@ -1,0 +1,24 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    padding: 0.4em;
+    z-index: 1;
+    background-color: $dark-accent;
+
+    &--logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        &-headline {
+            margin: 0;
+            font-size: 2rem;
+            color: $primary-font;
+        }
+
+        &-subhead {
+            margin: 0;
+            font-size: 0.75rem;
+        }
+    }
+}

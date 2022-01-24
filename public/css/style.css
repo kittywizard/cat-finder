@@ -12,6 +12,7 @@ body {
 .header {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   padding: 0.4em;
   z-index: 1;
   background-color: #6A4973;
@@ -20,6 +21,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  margin-left: 0.5em;
 }
 .header--logo-headline {
   margin: 0;
@@ -29,6 +31,23 @@ body {
 .header--logo-subhead {
   margin: 0;
   font-size: 0.75rem;
+}
+
+.nav {
+  list-style-type: none;
+}
+.nav .heart-link {
+  color: #fa6ebb;
+  font-size: 2rem;
+  margin-right: 0.5em;
+}
+.nav .heart-link:hover {
+  color: #E2D9CA;
+}
+
+.card--image {
+  border-radius: 15px;
+  max-height: 500px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,4 +1,15 @@
 .card--image {
     border-radius: 15px;
     max-height:500px;
+    max-width: 500px;
+    object-fit: cover;
+}
+
+.heart-link {
+    color: $heart;
+
+    &:hover,
+    &:focus {
+        color: $text-light;
+    }
 }

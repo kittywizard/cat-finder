@@ -1,5 +1,10 @@
 @import './abstracts/variables.scss';
 @import './base/layout.scss';
 @import './base/header.scss';
+
 @import './components/nav.scss';
 @import './components/image.scss';
+@import "./components/divider.scss";
+
+@import './typography/card.scss';
+@import './typography/input.scss';

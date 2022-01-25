@@ -9,3 +9,22 @@ body {
     color: $text-light;
     
 }
+
+.card--container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 1em;
+}
+
+.card {
+    padding: 0.4em;
+    margin: 0.8em;
+    max-width: 500px;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1em;
+}

@@ -1,0 +1,23 @@
+.card {
+
+    &--cat-name {
+        font-weight: 700;
+        margin: 0.5em 0 0 0;
+    }
+
+    &--title {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.75rem;
+        align-items: center;
+    }
+
+    &--cat-location {
+        margin: 0.5em 0;
+        font-size: 0.75rem;
+    }
+
+    &--cat-desc {
+        margin-top: 0.75em;
+    }
+}

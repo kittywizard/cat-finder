@@ -1,6 +1,7 @@
 import {React, useState} from "react";
 import Header from "./components/Header";
 import CatCard from "./components/CatCard";
+import Search from "./components/Search";
 import data from "./data.js";
 
 function App() {
@@ -17,8 +18,11 @@ function App() {
 
   return (
     <div className="container">
-      <Header /> 
-      {catCardData}
+      <Header />
+      <Search />
+      <main className="card--container">
+        {catCardData}
+      </main>
     </div>
   );
 }

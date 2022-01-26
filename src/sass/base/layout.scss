@@ -14,12 +14,18 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 1em;
+    width: 80%;
+}
+
+.container {
+    display: grid;
+
 }
 
 .card {
     padding: 0.4em;
     margin: 0.8em;
-    max-width: 500px;
+    //max-width: 500px;
 }
 
 .search {

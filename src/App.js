@@ -21,6 +21,7 @@ function App() {
       <Header />
       <Search />
       <main className="card--container">
+
         {catCardData}
       </main>
     </div>

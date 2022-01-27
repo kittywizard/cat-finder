@@ -17,13 +17,15 @@ function App() {
   });
 
   return (
-    <div className="container">
+    <div>
       <Header />
-      <Search />
-      <main className="card--container">
-
-        {catCardData}
+      <main className="container">
+        <Search />
+        <div className="card--container">
+          {catCardData}
+        </div>
       </main>
+     
     </div>
   );
 }

@@ -1,4 +1,5 @@
 export default function Search() {
+    
     return (
         <section className="search">
             <div className="current-location">Current Location:</div>

@@ -8,11 +8,21 @@ function App() {
 
   const [catData, setCatData] = useState(data);
 
+  function toggle(id) {
+
+    setCatData(prevState => {
+        let updatedCatArray = prevState.map(cat => {
+                return id === cat.id ? {...cat, favorite: !cat.favorite} : cat
+            })
+            return updatedCatArray;
+    })
+}
+
   let catCardData = catData.map(cat => {
     return  <CatCard 
             data={cat}
             key={cat.id}
-            setCatData={setCatData}
+            toggle={toggle}
             />
   });
 

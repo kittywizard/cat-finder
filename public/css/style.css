@@ -77,6 +77,10 @@ body {
   color: #E2D9CA;
 }
 
+.heart-link-active {
+  color: #94094a;
+}
+
 .divider {
   background-color: #4A94A8;
   width: 50%;

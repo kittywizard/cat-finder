@@ -7,12 +7,15 @@ body {
     background-color: $primary-dark;
     font-family: $primary-font, sans-serif;
     color: $text-light;
-    
+}
+
+.root-container {
+    display: flex;
+    flex-direction: column;
 }
 
 .card--container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     margin: 1em;
     width: 80%;
 }
@@ -27,5 +30,13 @@ body {
 .card {
     padding: 0.4em;
     margin: 0.8em;
-    //max-width: 500px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 800px) {
+    .card--container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

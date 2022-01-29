@@ -27,7 +27,7 @@ function App() {
   });
 
   return (
-    <div>
+    <div className="root-container">
       <Header />
       <main className="container">
         <Search />

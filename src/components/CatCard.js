@@ -3,7 +3,6 @@ import React from "react";
 
 export default function CatCard(props) {
 
-
     return (
         <div className="card">
             <img src={props.data.image} alt={props.data.name} className="card--image"/>

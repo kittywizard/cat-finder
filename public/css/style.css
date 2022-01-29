@@ -9,9 +9,13 @@ body {
   color: #E2D9CA;
 }
 
+.root-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .card--container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   margin: 1em;
   width: 80%;
 }
@@ -26,8 +30,16 @@ body {
 .card {
   padding: 0.4em;
   margin: 0.8em;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
 }
 
+@media (min-width: 800px) {
+  .card--container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .header {
   display: flex;
   flex-direction: row;
@@ -83,7 +95,7 @@ body {
 
 .divider {
   background-color: #4A94A8;
-  width: 50%;
+  width: 70%;
   height: 5px;
   margin: 1em;
   border-radius: 5px;

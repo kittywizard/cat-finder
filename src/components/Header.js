@@ -7,7 +7,11 @@ export default function Header(props) {
                 <h1 className="header--logo-headline">Cat Finder</h1>
                 <p className="header--logo-subhead">find your purrfect pal 🐈</p>
             </div>
-            <Nav />
+            <Nav 
+                modalDisplay={props.modalDisplay}
+                modalToggle={props.modalToggle}
+                setToggle={props.setToggle}
+            />
         </header>
     )
 }

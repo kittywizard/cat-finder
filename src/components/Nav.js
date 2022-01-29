@@ -4,7 +4,9 @@ export default function Nav(props) {
         <nav className="header-nav">
             <ul className="nav">
                 <li className="nav-link">
-                    <a href="#">
+                    <a href="#/"
+                        onClick={props.modalDisplay}
+                    >
                         <i className="fas fa-heart heart-link"></i>
                     </a>
                 </li>

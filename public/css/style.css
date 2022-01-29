@@ -24,7 +24,8 @@ body {
   display: grid;
   grid-template-areas: repeat(2, 1fr)/repeat(2, 1fr);
   width: 80%;
-  margin: 1em;
+  margin-top: 6em;
+  position: absolute;
 }
 
 .card {
@@ -110,6 +111,60 @@ body {
 
 .current-location {
   align-self: center;
+}
+
+.modal {
+  position: relative;
+  top: 100px;
+  left: 2px;
+  max-width: 400px;
+  z-index: 1;
+  margin: 0.5em;
+  border-radius: 15px;
+  background-color: #6A4973;
+  -webkit-box-shadow: 4px 4px 8px -1px rgba(0, 0, 0, 0.84);
+  box-shadow: 4px 4px 8px -1px rgba(0, 0, 0, 0.84);
+}
+.modal-header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5em;
+  background-color: #2B293C;
+  border-radius: 15px 15px 0 0;
+  padding: 0.5em;
+}
+.modal .headline {
+  margin: 0;
+}
+.modal .headline,
+.modal .heart-link {
+  justify-self: center;
+  font-size: 2rem;
+}
+.modal .heart-link,
+.modal .heart-link:hover,
+.modal .heart-link:focus {
+  color: #fa6ebb;
+  align-self: center;
+}
+.modal-close {
+  font-size: 2rem;
+  cursor: pointer;
+  margin: 0;
+  justify-self: self-end;
+}
+.modal-close:hover {
+  color: #4A94A8;
+}
+.modal-catGroup {
+  padding: 0.5em;
+}
+.modal-catName {
+  margin: 0.2em 0.2em 0 0.2em;
+  font-size: 2rem;
+}
+.modal-catInfo {
+  font-size: 0.75rem;
 }
 
 .card--cat-name {

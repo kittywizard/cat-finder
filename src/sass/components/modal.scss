@@ -1,0 +1,68 @@
+.modal {
+
+position: relative;
+top: 100px;
+left: 2px;
+max-width: 400px;
+z-index: 1;
+
+margin: 0.5em;
+border-radius: 15px;
+
+background-color: $dark-accent;
+-webkit-box-shadow: 4px 4px 8px -1px rgba(0,0,0,0.84); 
+box-shadow: 4px 4px 8px -1px rgba(0,0,0,0.84);
+
+    &-header {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5em;
+        background-color: $primary-dark;
+        border-radius: 15px 15px 0 0;
+        padding: 0.5em;
+    }
+
+    .headline {
+        margin: 0;
+    }
+
+    .headline,
+    .heart-link
+     {
+        justify-self: center;
+        font-size: 2rem;
+    }
+    //default has a hover state, getting rid of it here
+    .heart-link,
+    .heart-link:hover,
+    .heart-link:focus {
+        color: $heart;
+        align-self: center;
+    }
+
+
+    &-close {
+        font-size: 2rem;
+        cursor: pointer;
+        margin: 0;
+        justify-self: self-end;
+
+        &:hover {
+            color: $bright-accent;
+        }
+    }
+
+    &-catGroup {
+        padding: 0.5em;
+    }
+
+    &-catName {
+        margin: 0.2em 0.2em 0 0.2em;
+        font-size: 2rem;
+    }
+
+    &-catInfo {
+        font-size: 0.75rem;
+    }
+    
+}

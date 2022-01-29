@@ -24,7 +24,9 @@ body {
     display: grid;
     grid-template-areas: repeat(2, 1fr) / repeat(2, 1fr);
     width: 80%;
-    margin: 1em;
+    margin-top: 6em;
+    
+    position: absolute;
 }
 
 .card {

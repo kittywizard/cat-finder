@@ -62,7 +62,7 @@ body {
 }
 .header--logo-subhead {
   margin: 0;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
 }
 
 .nav {
@@ -107,6 +107,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin: 0 1em;
 }
 
 .current-location {

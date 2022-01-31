@@ -59,6 +59,7 @@ function App() {
           modalToggle={modalToggle}
           setToggle={setToggle}
         /> }
+        
         <Search />
         
         {/* display all cat data below */}

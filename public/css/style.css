@@ -114,6 +114,10 @@ body {
   align-self: center;
 }
 
+.overlay {
+  position: absolute;
+}
+
 .modal {
   position: relative;
   top: 100px;

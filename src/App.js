@@ -34,31 +34,28 @@ function App() {
             />
   });
 
-  //style for the stupid modal position:absolute
-  //fix later
-  const styles = {
-    marginTop: !modalToggle ? "6em" : 0
-  }
-
   return (
+
     <div className="root-container">
       <Header 
         modalDisplay={modalDisplay}
         modalToggle={modalToggle}
         setToggle={setToggle}
       />
-      <main 
-          className="container"
-          style={styles}>
-
+      
+      <div className="overlay">
         {/* only display modal if the toggle state is true */}
         {modalToggle && 
-        <Modal 
-          data={catData}
-          modalDisplay={modalDisplay}
-          modalToggle={modalToggle}
-          setToggle={setToggle}
-        /> }
+          <Modal 
+            data={catData}
+            modalDisplay={modalDisplay}
+            modalToggle={modalToggle}
+            setToggle={setToggle}
+          /> }
+      </div>
+      
+      <main 
+          className="container">
         
         <Search />
         
@@ -69,6 +66,7 @@ function App() {
       </main>
      
     </div>
+    
   );
 }
 

@@ -48,6 +48,7 @@ body {
   padding: 0.4em;
   z-index: 1;
   background-color: #6A4973;
+  position: sticky;
 }
 .header--logo {
   display: flex;
@@ -178,6 +179,11 @@ body {
 }
 .modal-catHeader {
   display: flex;
+}
+
+.footer {
+  background-color: #4A94A8;
+  width: 100%;
 }
 
 .card--cat-name {

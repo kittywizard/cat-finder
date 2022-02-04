@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import CatCard from "./components/CatCard";
 import Search from "./components/Search";
 import Modal from "./components/Modal";
+import Footer from "./components/Footer";
 import data from "./data.js";
 
 function App() {
@@ -64,7 +65,8 @@ function App() {
           {catCardData}
         </div>
       </main>
-     
+      
+      {/* <Footer /> */}
     </div>
     
   );

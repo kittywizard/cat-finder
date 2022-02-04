@@ -5,6 +5,7 @@
     padding: 0.4em;
     z-index: 1;
     background-color: $dark-accent;
+    position: sticky;
 
     &--logo {
         display: flex;

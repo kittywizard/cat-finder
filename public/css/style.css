@@ -171,6 +171,14 @@ body {
 .modal-catInfo {
   font-size: 0.75rem;
 }
+.modal-image {
+  max-width: 100px;
+  border-radius: 15px;
+  padding: 0.6em;
+}
+.modal-catHeader {
+  display: flex;
+}
 
 .card--cat-name {
   font-weight: 700;
@@ -190,7 +198,8 @@ body {
   margin-top: 0.75em;
 }
 
-form input {
+form input,
+form button {
   padding: 0.5em;
   background-color: #E2D9CA;
   color: #6A4973;
@@ -199,6 +208,12 @@ form input {
   margin: 0.3em;
   font-family: "Outfit";
   align-self: center;
+  cursor: pointer;
+}
+form button:hover {
+  background-color: #4A94A8;
+  color: #E2D9CA;
+  font-weight: 700;
 }
 form .location-marker {
   color: #4A94A8;

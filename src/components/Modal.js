@@ -7,10 +7,14 @@ export default function Modal(props) {
     let favCatDisplay = favoriteCats.map(cat => {
         return <div className="modal-catGroup">
             <h4 className="modal-catName">{cat.name}</h4>
-            <p className="modal-catInfo">
-                <strong>Breed/Color:</strong> {cat.breed} <br />
-                <strong>Age: </strong>{cat.age}</p>
-
+                <div className="modal-catHeader">
+                    <img src={cat.image} alt={cat.name} className="modal-image"/>
+                        <p className="modal-catInfo">
+                            <strong>Breed/Color:</strong> {cat.breed} <br />
+                            <strong>Age: </strong>{cat.age} <br />
+                            <strong>Location: </strong> {cat.hometown}
+                        </p>
+                </div>
                 <Divider />
         </div>
     });

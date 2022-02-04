@@ -1,5 +1,6 @@
 form {
-    input {
+    input,
+    button {
         padding: 0.5em;
         background-color: $text-light;
         color: $dark-accent;
@@ -9,6 +10,13 @@ form {
 
         font-family: $primary-font;
         align-self: center;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: $bright-accent;
+        color: $text-light;
+        font-weight: 700;
     }
 
     .location-marker {

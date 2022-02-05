@@ -24,8 +24,7 @@ body {
   display: grid;
   grid-template-areas: repeat(2, 1fr)/repeat(2, 1fr);
   width: 80%;
-  margin-top: 6em;
-  position: absolute;
+  margin-top: 2em;
 }
 
 .card {
@@ -184,6 +183,15 @@ body {
 .footer {
   background-color: #4A94A8;
   width: 100%;
+  padding: 0.5em;
+  font-size: 0.75em;
+}
+.footer-link {
+  text-decoration: none;
+  color: #2B293C;
+}
+.footer-link:hover, .footer-link:focus {
+  font-weight: 700;
 }
 
 .card--cat-name {

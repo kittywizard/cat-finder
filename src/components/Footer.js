@@ -5,7 +5,7 @@ export default function Footer() {
                 Copy Courtesy of <a href="http://www.catipsum.com/index.php" className="footer-link">Cat Ipsum</a>
             </p>
             <p>
-                Something else.
+                Adopt a cat from your local shelter! :)
             </p>
         </footer>
     )

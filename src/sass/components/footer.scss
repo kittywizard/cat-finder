@@ -1,0 +1,20 @@
+.footer {
+    background-color: $bright-accent;
+    width: 100%;
+    padding: 0.5em;
+    display: flex;
+    justify-content: space-around;
+
+    font-size: 0.75em;
+
+    &-link {
+        text-decoration: none;
+        color: $primary-dark;
+
+        &:hover,
+        &:focus {
+            font-weight: 700;
+        }
+    }
+
+}

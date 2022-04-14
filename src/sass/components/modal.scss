@@ -59,6 +59,7 @@
 
         &-catGroup {
             padding: 0.5em;
+
         }
 
         &-catName {
@@ -68,6 +69,17 @@
 
         &-catInfo {
             font-size: 0.75rem;
+            //padding: 0.5em;
+        }
+
+        &-image {
+            max-width: 100px;
+            border-radius: 15px;
+            padding: 0.6em;
+        }
+
+        &-catHeader {
+            display: flex;
         }
     
 }

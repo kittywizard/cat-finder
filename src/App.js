@@ -1,4 +1,4 @@
-import {React, useState} from "react";
+import {React, useState, useEffect} from "react";
 import Header from "./components/Header";
 import CatCard from "./components/CatCard";
 import Search from "./components/Search";
@@ -6,6 +6,24 @@ import Modal from "./components/Modal";
 import data from "./data.js";
 
 function App() {
+
+  //fetch some data
+    //DELETE THIS EVENTUALLY --  BAD, NOT SECURE
+  const APIkey = process.env.REACT_APP_API_KEY;
+
+  useEffect(() => {
+    fetch(`https://api.thecatapi.com/v1/images/search`, {
+      method: "GET",
+      headers: {
+        "x-api-key": APIkey
+      }
+    })
+    .then(data => data.json())
+    .then(data => {
+      console.log(data);
+    })
+
+  }, []);
 
   const [catData, setCatData] = useState(data);
   const [modalToggle, setToggle] = useState(false);

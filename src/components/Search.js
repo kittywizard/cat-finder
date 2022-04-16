@@ -3,10 +3,12 @@ import React from "react";
 export default function Search() {
 
     const [location, setLocation] = React.useState(
-        {locationName: "",
-        locationEntered:false                             
-    });
-    
+        {
+            locationName: "",
+            locationEntered:false                             
+        }
+    );
+
     function handleChange(e) {
 
         const {name, value} = e.target;

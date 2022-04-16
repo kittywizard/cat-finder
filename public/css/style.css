@@ -75,6 +75,15 @@ body {
 .nav .heart-link:hover {
   color: #E2D9CA;
 }
+.nav .cat-favorite-count {
+  color: #fa6ebb;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.nav .cat-favorite-count:hover {
+  color: #E2D9CA;
+}
 
 .card--image {
   border-radius: 15px;

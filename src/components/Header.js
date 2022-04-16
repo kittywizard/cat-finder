@@ -11,6 +11,7 @@ export default function Header(props) {
                 modalDisplay={props.modalDisplay}
                 modalToggle={props.modalToggle}
                 setToggle={props.setToggle}
+                catCount={props.catCount[1]}
             />
         </header>
     )

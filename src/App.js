@@ -1,4 +1,4 @@
-import {React, useState} from "react";
+import {React, useState, useEffect} from "react";
 import Header from "./components/Header";
 import CatCard from "./components/CatCard";
 import Search from "./components/Search";
@@ -10,6 +10,9 @@ function App() {
 
   const [catData, setCatData] = useState(data);
   const [modalToggle, setToggle] = useState(false);
+  const [catFavorites, setCatFavorites] = useState([
+    [], 0
+  ]);
 
   //toggles the heart on each individual cat
   function toggle(id) {
@@ -21,10 +24,18 @@ function App() {
     })
 }
 
+useEffect(() => {
+  //update state whenever the cat Data updates - as of right now, only favorites change
+  let catFavsArray = catData.filter(cat => cat.favorite === true);
+  setCatFavorites([catFavsArray, catFavsArray.length]);
+}, [catData]);
+
+
   //used in Nav and Modal to turn the favorites display on and off
   function modalDisplay() {
     setToggle(prevState => !prevState)
   }
+
 
   //map out each cat object to a component
   let catCardData = catData.map(cat => {
@@ -42,13 +53,14 @@ function App() {
         modalDisplay={modalDisplay}
         modalToggle={modalToggle}
         setToggle={setToggle}
+        catCount={catFavorites}
       />
       
       <div className="overlay">
         {/* only display modal if the toggle state is true */}
         {modalToggle && 
           <Modal 
-            data={catData}
+            data={catFavorites}
             modalDisplay={modalDisplay}
             modalToggle={modalToggle}
             setToggle={setToggle}

@@ -10,4 +10,15 @@
             color: $text-light;
         }
     }
+
+    .cat-favorite-count {
+        color: $heart;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: 700;
+
+        &:hover {
+            color: $text-light;
+        }
+    }
 }

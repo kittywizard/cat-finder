@@ -3,8 +3,7 @@ import Divider from "./Divider";
 
 export default function Modal(props) {
 
-    let favoriteCats = props.data.filter(cat => cat.favorite === true);
-    let favCatDisplay = favoriteCats.map(cat => {
+    let favCatDisplay = props.data[0].map(cat => {
         return <div className="modal-catGroup">
             <h4 className="modal-catName">{cat.name}</h4>
                 <div className="modal-catHeader">

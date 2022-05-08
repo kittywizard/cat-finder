@@ -2,6 +2,10 @@
 
     list-style-type: none;
 
+    &-link {
+        position:relative;
+    }
+
     .heart-link {
         font-size: 2rem;
         margin-right: 0.5em;
@@ -11,14 +15,16 @@
         }
     }
 
-    .cat-favorite-count {
-        color: $heart;
+    .favorite-count {
+        position: absolute;
+        top: 7px;
+        left: 12px;
+        color: $primary-dark;
         text-decoration: none;
-        font-size: 1.5rem;
+        font-size: 0.75rem;
         font-weight: 700;
 
-        &:hover {
-            color: $text-light;
-        }
     }
+
+
 }

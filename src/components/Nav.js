@@ -1,24 +1,19 @@
 import { Link } from "react-router-dom";
+import {useContext} from "react";
+import { Context } from "../Context";
 
-export default function Nav(props) {
+export default function Nav() {
+
+    const {catFavorites} = useContext(Context);
 
     return (
         <nav className="header-nav">
             <ul className="nav">
                 <li className="nav-link">
                     <Link to="/favorite">
-                        <button
-                            onClick={props.modalDisplay}
-                        >
                             <i className="fas fa-heart heart-link"></i>
-                            {props.catCount !== 0 &&
-                                <span className="cat-favorite-count">
-                                    {props.catCount}
-                                </span>
-                            }
-                        </button>
+                            <div className="favorite-count">{catFavorites[1]}</div>
                     </Link>
-
                 </li>
             </ul>
         </nav>

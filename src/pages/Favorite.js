@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Context } from "../Context";
 import Divider from "../components/Divider";
+import FavoriteCard from "../components/FavoriteCard";
 
 export default function Favorite() {
 

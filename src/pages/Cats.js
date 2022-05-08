@@ -1,7 +1,7 @@
 import CatCard from "../components/CatCard";
 import Search from "../components/Search";
 
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import {Context} from "../Context";
 
 export default function Cats(props) {

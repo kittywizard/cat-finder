@@ -30,12 +30,6 @@ useEffect(() => {
 }, [catData]);
 
 
-  // //used in Nav and Modal to turn the favorites display on and off
-  // function modalDisplay() {
-  //   setToggle(prevState => !prevState)
-  // }
-
-
   //map out each cat object to a component
   let catCardData = catData.map(cat => {
     return  <CatCard 

@@ -1,5 +1,6 @@
 import CatCard from "../components/CatCard";
 import Search from "../components/Search";
+import Filter from "../components/Filter";
 
 import { useContext } from "react";
 import {Context} from "../Context";
@@ -17,8 +18,11 @@ export default function Cats(props) {
     });
 
     return (
-        <section className="card--container">
-            {catCardData}
-        </section>
+        <>
+            <Filter />
+            <section className="card--container">
+                {catCardData}
+            </section>
+        </>
     )
 }

@@ -10,7 +10,6 @@ export default function App2() {
     return (
         <div className="root-container">
             <Header />
-
             <Routes>
                 <Route path="/" element={<Cats/>}/>
                 <Route path="/favorite" element={<Favorite/>} />

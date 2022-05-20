@@ -9,6 +9,9 @@ export default function Checkbox(props) {
                 id={props.id}
                 key={props.key}
             />
+            <label htmlFor={props.name}>
+                {props.name}
+            </label>
         </>
     )
 }

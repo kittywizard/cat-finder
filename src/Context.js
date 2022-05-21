@@ -9,7 +9,7 @@ function ContextProvider({children}) {
     const [catFavorites, setCatFavorites] = useState([
         [], 0
       ]);
-
+      
     //toggles the heart on each individual cat
     function toggle(id) {
         setCatData(prevState => {

@@ -3,16 +3,10 @@ import Checkbox from "./filters/Checkbox";
 
 export default function Filter(props) {
 
-    //map options and create a checkbox for each
-        //need to kill the duplicates though
-        //unchecked by default
-
-        console.log(props.catFilterData)
-
  
     const catFilterOptionDisplay = props.catFilterData.map(cat => {
             return  <Checkbox 
-                        onChange={props.handleChange}
+                        onChange={(e) => props.handleChange(e, cat.id)}
                         name={cat.breed}
                         isChecked={cat.isChecked}
                         id={cat.id}

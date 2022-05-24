@@ -9,7 +9,7 @@ import {Context} from "../Context";
 export default function Cats() {
 
     //cat card / display & state 
-  const {catData, toggle, catFilterData} = useContext(Context);
+  const {catData, toggle, catFilterData, setCatFilterData} = useContext(Context);
   const catCardData = catData.map(cat => {
     return  <CatCard 
             data={cat}
@@ -18,9 +18,13 @@ export default function Cats() {
             />
   });
 
-  function handleChange() {
-      //do a thing
-      console.log('handle change')
+  function handleChange(event, id) {
+
+      setCatFilterData(prevState => prevState.map(filter => {
+            return filter.id === id ? {...filter, isChecked: !filter.isChecked} : filter
+        }
+        
+        ))
   }
 
 

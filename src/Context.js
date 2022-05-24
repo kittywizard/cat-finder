@@ -52,7 +52,7 @@ function ContextProvider({children}) {
       }, []);
 
     return (
-        <Context.Provider value={{catData, toggle, catFavorites, catFilterData}}>
+        <Context.Provider value={{catData, toggle, catFavorites, catFilterData, setCatFilterData}}>
             {children}
         </Context.Provider>
     )

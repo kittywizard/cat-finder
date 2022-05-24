@@ -9,6 +9,7 @@ function ContextProvider({children}) {
     const [catFavorites, setCatFavorites] = useState([
         [], 0
       ]);
+      const [catFilterData, setCatFilterData] = useState([]);
       
     //toggles the heart on each individual cat
     function toggle(id) {
@@ -26,26 +27,29 @@ function ContextProvider({children}) {
         setCatFavorites([catFavsArray, catFavsArray.length]);
       }, [catData]);
 
-      //set up the filter state variable
+      useEffect(()=> {
 
-      //don't need all the cat info for this
-      const filtered = catData.map(cat => {
-          return {
-              breed: cat.breed,
-              isChecked: false,
-              id: cat.id
-          }
-      });
+      const filtered = catData.map(cat => (cat.breed));
 
       //reduce array to get rid of duplicate breeds
       const catFilterArray = filtered.reduce((accumulator, value) => {
-          console.log(accumulator)
-          //includes doesn't work properly on objects, need to find some other way to compare the strings. yay
-          return accumulator.includes(value.breed) ? accumulator : [...accumulator, value]
-      }, [])
+          return accumulator.includes(value) ? accumulator : [...accumulator, value]
+      },[]);
+
+      //take new array and add the isChecked variable.
+      const catMap = catFilterArray.map((filter, index) => (
+           {
+              breed: filter.breed,
+              isChecked: false,
+              id: index
+          }
+      ))
+
+      setCatFilterData(catMap)
+      }, []);
 
     return (
-        <Context.Provider value={{catData, toggle, catFavorites, catFilterArray}}>
+        <Context.Provider value={{catData, toggle, catFavorites, catFilterData}}>
             {children}
         </Context.Provider>
     )

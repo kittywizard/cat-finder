@@ -4,10 +4,10 @@ export default function Checkbox(props) {
             <input 
                 type="checkbox"
                 name={props.name}
-                checked={props}
+                checked={props.isChecked}
                 onChange={props.handleChange}
                 id={props.id}
-                key={props.key}
+                // key={props.key}
             />
             <label htmlFor={props.name}>
                 {props.name}

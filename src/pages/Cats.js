@@ -9,7 +9,7 @@ import {Context} from "../Context";
 export default function Cats() {
 
     //cat card / display & state 
-  const {catData, toggle, catFilterArray} = useContext(Context);
+  const {catData, toggle, catFilterData} = useContext(Context);
   const catCardData = catData.map(cat => {
     return  <CatCard 
             data={cat}
@@ -17,8 +17,6 @@ export default function Cats() {
             toggle={toggle}
             />
   });
-
-  console.log(catFilterArray)
 
   function handleChange() {
       //do a thing
@@ -30,7 +28,7 @@ export default function Cats() {
     return (
         <>
             <Filter 
-                catFilters={catFilterArray}
+                catFilters={catFilterData}
                 handleChange={handleChange}
             />
             <section className="card--container">

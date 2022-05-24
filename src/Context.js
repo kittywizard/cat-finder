@@ -27,6 +27,8 @@ function ContextProvider({children}) {
       }, [catData]);
 
       //set up the filter state variable
+
+      //don't need all the cat info for this
       const filtered = catData.map(cat => {
           return {
               breed: cat.breed,
@@ -37,7 +39,8 @@ function ContextProvider({children}) {
 
       //reduce array to get rid of duplicate breeds
       const catFilterArray = filtered.reduce((accumulator, value) => {
-          console.log(value.breed)
+          console.log(accumulator)
+          //includes doesn't work properly on objects, need to find some other way to compare the strings. yay
           return accumulator.includes(value.breed) ? accumulator : [...accumulator, value]
       }, [])
 

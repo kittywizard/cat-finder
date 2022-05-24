@@ -27,6 +27,7 @@ function ContextProvider({children}) {
         setCatFavorites([catFavsArray, catFavsArray.length]);
       }, [catData]);
 
+      
       useEffect(()=> {
 
       const filtered = catData.map(cat => (cat.breed));
@@ -36,10 +37,12 @@ function ContextProvider({children}) {
           return accumulator.includes(value) ? accumulator : [...accumulator, value]
       },[]);
 
+      console.log(catFilterArray)
+
       //take new array and add the isChecked variable.
       const catMap = catFilterArray.map((filter, index) => (
            {
-              breed: filter.breed,
+              breed: filter,
               isChecked: false,
               id: index
           }

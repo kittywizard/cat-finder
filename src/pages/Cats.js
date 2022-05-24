@@ -28,7 +28,7 @@ export default function Cats() {
     return (
         <>
             <Filter 
-                catFilters={catFilterData}
+                catFilterData={catFilterData}
                 handleChange={handleChange}
             />
             <section className="card--container">

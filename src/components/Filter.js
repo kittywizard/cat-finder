@@ -7,8 +7,10 @@ export default function Filter(props) {
         //need to kill the duplicates though
         //unchecked by default
 
+        console.log(props.catFilterData)
+
  
-    const catFilterOptionDisplay = props.catFilters.map(cat => {
+    const catFilterOptionDisplay = props.catFilterData.map(cat => {
             return  <Checkbox 
                         onChange={props.handleChange}
                         name={cat.breed}

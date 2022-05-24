@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 
 import CatCard from "../components/CatCard";
-//import Search from "../components/Search";
 import Filter from "../components/Filter";
 
 import { useContext } from "react";
@@ -10,7 +9,7 @@ import {Context} from "../Context";
 export default function Cats() {
 
     //cat card / display & state 
-  const {catData, toggle} = useContext(Context);
+  const {catData, toggle, catFilterArray} = useContext(Context);
   const catCardData = catData.map(cat => {
     return  <CatCard 
             data={cat}
@@ -19,32 +18,19 @@ export default function Cats() {
             />
   });
 
+  console.log(catFilterArray)
 
-  //checkbox logic
-  let catFilterArray = catData.map(cat => {
-      return {
-          breed: cat.breed,
-          isChecked: false
-      }
-  });
-
-
-  const [catFilterOptions, setCatFilterOptions] = useState([]);
-
-
-
-  function handleChange(id) {
-    console.log('update state');
-    setCatFilterOptions(prevState => {
-        //do a thing
-    });
+  function handleChange() {
+      //do a thing
+      console.log('handle change')
   }
+
 
 
     return (
         <>
             <Filter 
-                catFilters={catFilterOptions}
+                catFilters={catFilterArray}
                 handleChange={handleChange}
             />
             <section className="card--container">

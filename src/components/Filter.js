@@ -8,11 +8,9 @@ export default function Filter(props) {
         //unchecked by default
 
  
-
     const catFilterOptionDisplay = props.catFilters.map(cat => {
             return  <Checkbox 
                         id={cat.id}
-                        checked={`props.catFilterOptions.${props.name}`}
                         onChange={props.handleChange}
                         name={cat.breed}
                         key={cat.id}

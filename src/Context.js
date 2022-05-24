@@ -23,12 +23,26 @@ function ContextProvider({children}) {
     useEffect(() => {
         //update state whenever the cat Data updates - as of right now, only favorites change
         let catFavsArray = catData.filter(cat => cat.favorite === true);
-        console.log(catFavsArray)
         setCatFavorites([catFavsArray, catFavsArray.length]);
       }, [catData]);
 
+      //set up the filter state variable
+      const filtered = catData.map(cat => {
+          return {
+              breed: cat.breed,
+              isChecked: false,
+              id: cat.id
+          }
+      });
+
+      //reduce array to get rid of duplicate breeds
+      const catFilterArray = filtered.reduce((accumulator, value) => {
+          console.log(value.breed)
+          return accumulator.includes(value.breed) ? accumulator : [...accumulator, value]
+      }, [])
+
     return (
-        <Context.Provider value={{catData, toggle, catFavorites}}>
+        <Context.Provider value={{catData, toggle, catFavorites, catFilterArray}}>
             {children}
         </Context.Provider>
     )

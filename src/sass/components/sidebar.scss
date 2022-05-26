@@ -1,2 +1,13 @@
 .sidebar {
+    background-color: $dark-accent;
+}
+
+.sidebar-arrow, .sidebar-close {
+   font-size: 2rem;
+   padding: 0.5em 0 0 0.5em;
+
+   &:hover {
+       color: $bright-accent;
+       cursor: pointer;
+   }
 }

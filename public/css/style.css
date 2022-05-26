@@ -241,6 +241,19 @@ body {
   font-weight: 700;
 }
 
+.sidebar {
+  background-color: #4d4764;
+}
+
+.sidebar-arrow, .sidebar-close {
+  font-size: 2rem;
+  padding: 0.5em 0 0 0.5em;
+}
+.sidebar-arrow:hover, .sidebar-close:hover {
+  color: #4A94A8;
+  cursor: pointer;
+}
+
 .card--cat-name {
   font-weight: 700;
   margin: 0.5em 0 0 0;

@@ -16,22 +16,25 @@ body {
 
 .card--container {
     display: grid;
-    margin: 1em;
+    margin: 1em auto;
     width: 80%;
-}
-
-.container {
-    display: grid;
-    grid-template-areas: repeat(2, 1fr) / repeat(2, 1fr);
-    width: 80%;
-    margin-top: 2em;
+    gap: 2em;
 
 }
+
+// don't believe this class is needed 
+// .container {
+//     display: grid;
+//     grid-template-areas: repeat(2, 1fr) / repeat(2, 1fr);
+//     width: 80%;
+//     margin-top: 2em;
+
+// }
 
 .card {
     padding: 0.4em;
-    margin: 0.8em;
-    // max-width: 500px;
+    margin: 0.5em;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
 }

@@ -12,7 +12,9 @@ export default function App2() {
     const [displaySidebar, setDisplaySidebar] = useState(false);
 
     function showSidebar() {
-        //hide the arrow when not in use?
+        //toggle the class for the animation
+        //nav.classList.toggle('nav-open');
+
        setDisplaySidebar(prevState => !prevState)
     }
     

@@ -1,6 +1,11 @@
 .sidebar {
     background-color: $dark-accent;
+    
+    //need these two to move the sidebar in/out
+    // transform: translateY(-1000px);
+    // transform: translateY(0);
 }
+
 
 .sidebar-arrow, .sidebar-close {
    font-size: 2rem;

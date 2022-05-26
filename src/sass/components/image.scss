@@ -3,6 +3,16 @@
     max-height:500px;
     max-width: 500px;
     object-fit: cover;
+
+    transition: 
+    transform 750ms cubic-bezier(.5, 0, .5, 1),
+    filter 550ms;
+
+    &:hover {
+        transform: scale(1.02);
+        filter:contrast(1.2);
+    }
+
 }
 
 .heart-link {

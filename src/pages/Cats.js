@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 
 import CatCard from "../components/CatCard";
-import Filter from "../components/Filter";
 
 import { useContext } from "react";
 import {Context} from "../Context";
@@ -9,7 +8,7 @@ import {Context} from "../Context";
 export default function Cats() {
 
     //cat card / display & state 
-  const {catData, toggle, catFilterData, setCatFilterData} = useContext(Context);
+  const {catData, toggle, catFilterData} = useContext(Context);
   const catCardData = catData.map(cat => {
     return  <CatCard 
             data={cat}
@@ -18,23 +17,23 @@ export default function Cats() {
             />
   });
 
-  function handleChange(event, id) {
-
-      setCatFilterData(prevState => prevState.map(filter => {
-            return filter.id === id ? {...filter, isChecked: !filter.isChecked} : filter
-        }
-        
-        ))
-  }
-
+        //update the list each time the catFilterData changes (user hit a checkbox)
+        useEffect(() => {
+            //diff variable, declare it else where?
+            const catCardData = catData.map(cat => {
+                //only if breed matches, return a component, otherwise nothing
+                return  <CatCard 
+                        data={cat}
+                        key={cat.id}
+                        toggle={toggle}
+                        />
+              });
+            
+        }, [catFilterData]);
 
 
     return (
         <>
-            <Filter 
-                catFilterData={catFilterData}
-                handleChange={handleChange}
-            />
             <section className="card--container">
                 {catCardData}
             </section>

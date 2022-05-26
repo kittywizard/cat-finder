@@ -30,7 +30,6 @@ body {
 .card {
   padding: 0.4em;
   margin: 0.8em;
-  max-width: 500px;
   display: flex;
   flex-direction: column;
 }
@@ -60,7 +59,7 @@ body {
   justify-content: space-between;
   padding: 0.4em;
   z-index: 1;
-  background-color: #6A4973;
+  background-color: #4d4764;
   position: sticky;
 }
 .header--logo {
@@ -152,7 +151,7 @@ body {
   z-index: 1;
   margin: 0.5em;
   border-radius: 15px;
-  background-color: #6A4973;
+  background-color: #4d4764;
   -webkit-box-shadow: 4px 4px 8px -1px rgba(0, 0, 0, 0.84);
   box-shadow: 4px 4px 8px -1px rgba(0, 0, 0, 0.84);
 }
@@ -206,6 +205,26 @@ body {
   display: flex;
 }
 
+.filter-headline {
+  font-size: 1.25rem;
+  color: #4A94A8;
+  margin: 0;
+}
+
+.filter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  max-width: 300px;
+}
+.filter-form .checkbox {
+  padding-left: 0.5em;
+}
+
+.checkbox-container {
+  padding: 0.3em;
+}
+
 .footer {
   background-color: #4A94A8;
   width: 100%;
@@ -244,7 +263,7 @@ form input,
 form button {
   padding: 0.5em;
   background-color: #E2D9CA;
-  color: #6A4973;
+  color: #4d4764;
   border: none;
   border-radius: 10px;
   margin: 0.3em;

@@ -27,29 +27,30 @@ function ContextProvider({children}) {
         setCatFavorites([catFavsArray, catFavsArray.length]);
       }, [catData]);
 
-      
+      //initial render - set the filters + checkbox info
       useEffect(()=> {
 
-      const filtered = catData.map(cat => (cat.breed));
+        const filtered = catData.map(cat => (cat.breed));
 
-      //reduce array to get rid of duplicate breeds
-      const catFilterArray = filtered.reduce((accumulator, value) => {
-          return accumulator.includes(value) ? accumulator : [...accumulator, value]
-      },[]);
+        //reduce array to get rid of duplicate breeds
+        const catFilterArray = filtered.reduce((accumulator, value) => {
+            return accumulator.includes(value) ? accumulator : [...accumulator, value]
+        },[]);
 
-      console.log(catFilterArray)
+        console.log(catFilterArray)
 
-      //take new array and add the isChecked variable.
-      const catMap = catFilterArray.map((filter, index) => (
-           {
-              breed: filter,
-              isChecked: false,
-              id: index
-          }
-      ))
+        //take new array and add the isChecked variable.
+        const catMap = catFilterArray.map((filter, index) => (
+            {
+                breed: filter,
+                isChecked: false,
+                id: index
+            }
+        ))
 
-      setCatFilterData(catMap)
+        setCatFilterData(catMap)
       }, []);
+
 
     return (
         <Context.Provider value={{catData, toggle, catFavorites, catFilterData, setCatFilterData}}>

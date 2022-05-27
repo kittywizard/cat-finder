@@ -7,7 +7,10 @@ export default function Sidebar(props) {
     const {catFilterData} = useContext(Context);
 
     return (
-        <section className="sidebar">
+        <section 
+            className="sidebar"
+            // style={{transform: props.displaySidebar ? "translateY(0px)" : "translateY(-1000px)"}}
+        >
             <i className="fas fa-solid fa-arrow-left sidebar-close" onClick={props.showSidebar}></i>
              <Filter 
                 catFilterData={catFilterData}

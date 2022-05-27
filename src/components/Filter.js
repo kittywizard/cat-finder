@@ -8,10 +8,8 @@ import {Context} from "../Context";
 export default function Filter(props) {
     const {setCatFilterData} = useContext(Context);
 
-
     function handleChange(id) {
 
-        console.log(`handle change at ${id}`);
           setCatFilterData(prevState => prevState.map(filter => {
                 return filter.id === id ? {...filter, isChecked: !filter.isChecked} : filter
             }

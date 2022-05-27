@@ -11,9 +11,19 @@ export default function App2() {
 
     const [displaySidebar, setDisplaySidebar] = useState(false);
 
+    const hiddenStyle = {
+        transform: "translateY(-1000px)"
+    }
+
+    const showStyles = {
+        transform: "translateY(0px)"
+    }
+
     function showSidebar() {
         //toggle the class for the animation
-        //nav.classList.toggle('nav-open');
+          //need these two to move the sidebar in/out
+    // transform: translateY(-1000px);
+    // transform: translateY(0);
 
        setDisplaySidebar(prevState => !prevState)
     }
@@ -23,7 +33,10 @@ export default function App2() {
             <Header /> 
             {
                 displaySidebar ?
-                <Sidebar showSidebar={showSidebar}/> :
+                <Sidebar 
+                    showSidebar={showSidebar}
+                    // style={{displaySidebar ? hiddenStyle : showStyles}}
+                    /> :
                 <div onClick={showSidebar}>
                     <i className="fas fa-solid fa-arrow-right sidebar-arrow"></i>
                 </div>

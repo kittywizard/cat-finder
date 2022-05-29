@@ -51,12 +51,6 @@ function ContextProvider({children}) {
         setCatFilterData(catMap)
       }, []);
 
-      useEffect(() => {
-        //every time the filter data updates (outside of initial render)
-
-        //check the checked property and remap the catData accordingly (this will trigger the other use effect but for now shouldnt kill performance?)
-
-      },[catFilterData])
 
 
     return (

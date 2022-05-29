@@ -12,6 +12,7 @@ body {
 .root-container {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 .card--container {
@@ -19,7 +20,12 @@ body {
     margin: 1em auto;
     width: 80%;
     gap: 2em;
+    flex:1;
+}
 
+//this forces the footer to be at the bottom via flexbox
+.favorite-page {
+    flex: 1;
 }
 
 // don't believe this class is needed 

@@ -1,14 +1,23 @@
 .footer {
-    background-color: $bright-accent;
+    background-color: $dark-accent;
     padding: 0.5em;
     display: flex;
     justify-content: space-around;
-
-    font-size: 0.75em;
+    align-items: baseline;
+    z-index: 1;
+    position: sticky;
+   
+    &-content {
+        color: $text-light;
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 0.055em;
+    }
 
     &-link {
         text-decoration: none;
-        color: $primary-dark;
+        color: $text-light;
+        border-bottom: 1px solid $bright-accent;
 
         &:hover,
         &:focus {

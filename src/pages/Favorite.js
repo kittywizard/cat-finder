@@ -14,7 +14,7 @@ export default function Favorite() {
 });
 
     return (
-        <section>
+        <section className="favorite-page">
             <div className="modal-header">
                 <h3 className="headline">
                     Favorites &nbsp;

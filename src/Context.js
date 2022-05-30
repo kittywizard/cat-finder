@@ -21,8 +21,8 @@ function ContextProvider({children}) {
         })
     }
 
+    //update favorites
     useEffect(() => {
-        //update state whenever the cat Data updates - as of right now, only favorites change
         let catFavsArray = catData.filter(cat => cat.favorite === true);
         setCatFavorites([catFavsArray, catFavsArray.length]);
       }, [catData]);
@@ -37,8 +37,6 @@ function ContextProvider({children}) {
             return accumulator.includes(value) ? accumulator : [...accumulator, value]
         },[]);
 
-        console.log(catFilterArray)
-
         //take new array and add the isChecked variable.
         const catMap = catFilterArray.map((filter, index) => (
             {
@@ -50,8 +48,6 @@ function ContextProvider({children}) {
 
         setCatFilterData(catMap)
       }, []);
-
-
 
     return (
         <Context.Provider value={{catData, toggle, catFavorites, catFilterData, setCatFilterData}}>

@@ -7,7 +7,7 @@ import Sidebar from "./components/Sidebar";
 import {Routes, Route} from "react-router-dom";
 import { useState } from "react";
 
-export default function App2() {
+export default function App() {
 
     const [displaySidebar, setDisplaySidebar] = useState(false);
 
@@ -31,6 +31,7 @@ export default function App2() {
                 /> :
                 <div onClick={showSidebar}>
                     <i className="fas fa-solid fa-arrow-right sidebar-arrow"></i>
+
                 </div>
             }
             <Routes>

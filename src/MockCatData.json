@@ -30,7 +30,7 @@
     "gender": "Male",
     "favorite": false,
     "id": 3,
-    "image": "https://robohash.org/temporeetest.png?size=50x50&set=set1"
+    "image": "http://placekitten.com/705/705"
   },
   {
     "name": "Olin",
@@ -41,7 +41,7 @@
     "gender": "Male",
     "favorite": false,
     "id": 4,
-    "image": "https://robohash.org/ipsumlaboriosamdignissimos.png?size=50x50&set=set1"
+    "image": "http://placekitten.com/710/710"
   },
   {
     "name": "Kiah",
@@ -52,7 +52,7 @@
     "gender": "Female",
     "favorite": false,
     "id": 5,
-    "image": "https://robohash.org/earumpariaturvoluptas.png?size=50x50&set=set1"
+    "image": "http://placekitten.com/700/800"
   },
   {
     "name": "Kelsy",
@@ -63,7 +63,7 @@
     "gender": "Female",
     "favorite": false,
     "id": 6,
-    "image": "https://robohash.org/numquamvelitomnis.png?size=50x50&set=set1"
+    "image": "http://placekitten.com/780/900"
   },
   {
     "name": "Hollie",
@@ -74,7 +74,7 @@
     "gender": "Female",
     "favorite": false,
     "id": 7,
-    "image": "https://robohash.org/aliquidsequidolor.png?size=50x50&set=set1"
+    "image": "http://placekitten.com/1000/1000"
   },
   {
     "name": "Shaughn",
@@ -85,7 +85,7 @@
     "gender": "Male",
     "favorite": false,
     "id": 8,
-    "image": "https://robohash.org/solutavelitconsectetur.png?size=50x50&set=set1"
+    "image": "http://placekitten.com/1200/1200"
   },
   {
     "name": "Leland",

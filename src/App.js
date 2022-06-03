@@ -6,16 +6,14 @@ import Sidebar from "./components/Sidebar";
 
 import {Routes, Route} from "react-router-dom";
 import { useState } from "react";
+import { CSSTransition } from "react-transition-group";
+
 
 export default function App() {
 
     const [displaySidebar, setDisplaySidebar] = useState(false);
 
     function showSidebar() {
-        //toggle the class for the animation
-          //need these two to move the sidebar in/out
-    // transform: translateY(-1000px);
-    // transform: translateY(0);
 
        setDisplaySidebar(prevState => !prevState)
     }
@@ -23,7 +21,7 @@ export default function App() {
     return (
         <div className="root-container">
             <Header /> 
-            {
+            {/* {
                 displaySidebar ?
                 <Sidebar 
                     showSidebar={showSidebar}
@@ -31,9 +29,20 @@ export default function App() {
                 /> :
                 <div onClick={showSidebar}>
                     <i className="fas fa-solid fa-arrow-right sidebar-arrow"></i>
-
                 </div>
+            } */}
+            {!displaySidebar && 
+            <div onClick={showSidebar}>
+                    <i className="fas fa-solid fa-arrow-right sidebar-arrow"></i>
+            </div>
             }
+        
+         <CSSTransition in={displaySidebar} timeout={200} classNames="sidebar" unmountOnExit>
+            <Sidebar 
+                showSidebar={showSidebar}
+                displaySidebar={displaySidebar}
+                />
+        </CSSTransition>
             <Routes>
                 <Route path="/" element={<Cats/>}/>
                 <Route path="/favorite" element={<Favorite/>} />

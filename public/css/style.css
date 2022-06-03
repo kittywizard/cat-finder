@@ -258,6 +258,25 @@ body {
   background-color: #4d4764;
 }
 
+/*  react transition group uses these to animate */
+.sidebar-enter {
+  transform: translateX(-1000px);
+}
+
+.sidebar-enter-active {
+  transform: translateX(0);
+  transition: transform 0.3s;
+}
+
+.sidebar-exit {
+  transform: translateX(0px);
+}
+
+.sidebar-exit-active {
+  transform: translateX(-1000px);
+  transition: transform 0.3s;
+}
+
 .sidebar-arrow, .sidebar-close {
   font-size: 2rem;
   padding: 0.5em 0 0 0.5em;

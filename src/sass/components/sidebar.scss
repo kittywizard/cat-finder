@@ -1,9 +1,24 @@
 .sidebar {
     background-color: $dark-accent;
-    
-    //need these two to move the sidebar in/out
-    // transform: translateY(-1000px);
-    // transform: translateY(0);
+}
+
+/*  react transition group uses these to animate */
+.sidebar-enter {
+    transform: translateX(-1000px);
+}
+
+.sidebar-enter-active {
+    transform: translateX(0);
+    transition: transform .3s;
+}
+
+.sidebar-exit {
+    transform: translateX(0px);
+}
+
+.sidebar-exit-active {
+    transform: translateX(-1000px);
+    transition: transform .3s;
 }
 
 

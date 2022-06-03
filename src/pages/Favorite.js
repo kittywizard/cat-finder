@@ -21,7 +21,16 @@ export default function Favorite() {
                     <i className="fas fa-heart heart-link heart-link-active"></i>
                 </h3>
             </div>
-
+{/* 
+        {
+            catFavorites[0].length === 0 ?
+            <div>
+                Your favorites will appear here!
+            </div> :
+            <div className="modal-favorites">
+                {favCatDisplay}
+            </div>
+        } */}
             <div className="modal-favorites">
                 {favCatDisplay}
             </div>

@@ -18,12 +18,13 @@ function ContextProvider({children}) {
                     return id === cat.id ? {...cat, favorite: !cat.favorite} : cat
                 })
                 return updatedCatArray;
-        })
+        });
     }
 
     //update favorites
     useEffect(() => {
         let catFavsArray = catData.filter(cat => cat.favorite === true);
+        console.log(`cat favorite use effect firing; ${catFavsArray.length}`)
         setCatFavorites([catFavsArray, catFavsArray.length]);
       }, [catData]);
 

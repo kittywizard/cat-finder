@@ -21,16 +21,6 @@ export default function App() {
     return (
         <div className="root-container">
             <Header /> 
-            {/* {
-                displaySidebar ?
-                <Sidebar 
-                    showSidebar={showSidebar}
-                    displaySidebar={displaySidebar}
-                /> :
-                <div onClick={showSidebar}>
-                    <i className="fas fa-solid fa-arrow-right sidebar-arrow"></i>
-                </div>
-            } */}
             {!displaySidebar && 
             <div onClick={showSidebar}>
                     <i className="fas fa-solid fa-arrow-right sidebar-arrow"></i>
@@ -43,6 +33,7 @@ export default function App() {
                 displaySidebar={displaySidebar}
                 />
         </CSSTransition>
+        
             <Routes>
                 <Route path="/" element={<Cats/>}/>
                 <Route path="/favorite" element={<Favorite/>} />

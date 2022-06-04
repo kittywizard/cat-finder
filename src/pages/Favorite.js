@@ -10,6 +10,7 @@ export default function Favorite() {
   let favCatDisplay = catFavorites[0].map(cat => {
     return <FavoriteCard 
                 cat={cat}
+                key={cat.id}
             />
 });
 

@@ -28,7 +28,7 @@ export default function Cats() {
 
         setCatDisplay(catCardData);
         
-    }, [catFilterData]);
+    }, [catFilterData, catData]);
 
     const catCardDisplayData = catDisplay.map(cat => {
         return  <CatCard 

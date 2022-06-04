@@ -21,18 +21,23 @@ export default function App() {
     return (
         <div className="root-container">
             <Header /> 
-            {!displaySidebar && 
-            <div onClick={showSidebar}>
-                    <i className="fas fa-solid fa-arrow-right sidebar-arrow"></i>
+
+            <div>
+                {!displaySidebar && 
+                    <div onClick={showSidebar}>
+                            <i className="fas fa-solid fa-arrow-right sidebar-arrow"></i>
+                    </div>
+                }
+            
+                <CSSTransition in={displaySidebar} timeout={200} classNames="sidebar" unmountOnExit>
+                    <Sidebar 
+                        showSidebar={showSidebar}
+                        displaySidebar={displaySidebar}
+                        />
+                </CSSTransition>
+
             </div>
-            }
-        
-         <CSSTransition in={displaySidebar} timeout={200} classNames="sidebar" unmountOnExit>
-            <Sidebar 
-                showSidebar={showSidebar}
-                displaySidebar={displaySidebar}
-                />
-        </CSSTransition>
+          
         
             <Routes>
                 <Route path="/" element={<Cats/>}/>

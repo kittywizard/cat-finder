@@ -8,13 +8,14 @@
     display: flex;
     flex-direction: column;
     align-items: baseline;
-    max-width: 300px;
 
     .checkbox {
-        padding-left: 0.5em;
+        padding-left: 0.3em;
     }
 }
 
 .checkbox-container {
-    padding: 0.3em;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: row;
 }

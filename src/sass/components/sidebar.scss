@@ -1,5 +1,7 @@
-.sidebar {
+.sidebar-style {
     background-color: $dark-accent;
+    z-index: 1;
+    grid-area: nav;
 }
 
 /*  react transition group uses these to animate */

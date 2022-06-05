@@ -6,6 +6,7 @@
     z-index: 1;
     background-color: $dark-accent;
     position: sticky;
+    grid-area: header;
 
     &--logo {
         display: flex;

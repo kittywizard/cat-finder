@@ -18,11 +18,9 @@ body {
 
 */
 .root-container {
-  display: grid;
-  grid-template-columns: 300px auto;
-  grid-template-rows: repeat(4, auto);
-  grid-template-areas: "nav header" "nav slider" "nav content" "nav footer";
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .card--container {
@@ -31,12 +29,10 @@ body {
   width: 80%;
   gap: 2em;
   flex: 1;
-  grid-area: content;
 }
 
 .favorite-page {
   flex: 1;
-  grid-area: content;
 }
 
 .card {
@@ -252,7 +248,6 @@ body {
   align-items: baseline;
   z-index: 1;
   position: sticky;
-  grid-area: footer;
 }
 .footer-content {
   color: #E2D9CA;

@@ -17,16 +17,16 @@ body {
 
 */
 .root-container {
-    // display: flex;
-    // flex-direction: column;
-    display: grid;
-    grid-template-columns: 300px auto;
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas:"nav header"
-                        "nav slider"
-                        "nav content"
-                        "nav footer";
-    min-height: 100vh;
+    min-height: 100vh; //need this for the footer to stick to the bottom
+    display: flex;
+    flex-direction: column;
+    // display: grid;
+    // grid-template-columns: 300px auto;
+    // grid-template-rows: repeat(4, auto);
+    // grid-template-areas:"nav header"
+    //                     "nav slider"
+    //                     "nav content"
+    //                     "nav footer";
 
 }
 
@@ -36,13 +36,13 @@ body {
     width: 80%;
     gap: 2em;
     flex:1;
-    grid-area: content;
+    // grid-area: content;
 }
 
 //this forces the footer to be at the bottom via flexbox
 .favorite-page {
     flex: 1;
-    grid-area: content;
+    // grid-area: content;
 }
 
 // don't believe this class is needed 

@@ -1,0 +1,342 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #2B293C;
+  font-family: "Outfit", sans-serif;
+  color: #E2D9CA;
+}
+
+/*
+    issues: 
+        header expands along with the side nav because its the same row
+        need to make the nav overlap everything, maybe grid is not the answer?
+        see figma course where gary simon does something like this
+        the end
+
+*/
+.root-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.card--container {
+  display: grid;
+  margin: 1em auto;
+  width: 80%;
+  gap: 2em;
+  flex: 1;
+}
+
+.favorite-page {
+  flex: 1;
+}
+
+.card {
+  padding: 0.4em;
+  margin: 0.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.router-link {
+  text-decoration: none;
+  color: #E2D9CA;
+}
+.router-link:active, .router-link:visited {
+  color: #E2D9CA;
+}
+.router-link:hover {
+  color: #E2D9CA;
+  background-color: rgba(74, 148, 168, 0.5);
+  border-radius: 10px;
+  padding: 0 0.3em;
+}
+
+@media (min-width: 800px) {
+  .card--container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.4em;
+  z-index: 1;
+  background-color: #4d4764;
+  position: sticky;
+  grid-area: header;
+}
+.header--logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 0.5em;
+}
+.header--logo-headline {
+  margin: 0;
+  font-size: 2rem;
+  color: "Outfit";
+}
+.header--logo-subhead {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.nav {
+  list-style-type: none;
+}
+.nav-link {
+  position: relative;
+}
+.nav .heart-link {
+  font-size: 2rem;
+  margin-right: 0.5em;
+}
+.nav .heart-link:hover {
+  color: #E2D9CA;
+}
+.nav .favorite-count {
+  position: absolute;
+  top: 7px;
+  left: 12px;
+  color: #2B293C;
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.card--image {
+  border-radius: 15px;
+  max-height: 800px;
+  max-width: 100%;
+  object-fit: cover;
+  transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), filter 550ms;
+}
+.card--image:hover {
+  transform: scale(1.02);
+  filter: contrast(1.2);
+}
+
+.heart-link {
+  color: #fa6ebb;
+}
+.heart-link:hover, .heart-link:focus {
+  color: #E2D9CA;
+}
+
+.heart-link-active {
+  color: #94094a;
+}
+
+.divider {
+  background-color: #4A94A8;
+  width: 70%;
+  height: 5px;
+  margin: 1em;
+  border-radius: 5px;
+  align-self: center;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 1em;
+}
+
+.current-location {
+  align-self: center;
+}
+
+.overlay {
+  position: absolute;
+}
+
+.modal {
+  position: relative;
+  top: 100px;
+  left: 2px;
+  max-width: 400px;
+  z-index: 1;
+  margin: 0.5em;
+  border-radius: 15px;
+  background-color: #4d4764;
+  -webkit-box-shadow: 4px 4px 8px -1px rgba(0, 0, 0, 0.84);
+  box-shadow: 4px 4px 8px -1px rgba(0, 0, 0, 0.84);
+}
+.modal-header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5em;
+  background-color: #2B293C;
+  border-radius: 15px 15px 0 0;
+  padding: 0.5em;
+}
+.modal .headline {
+  margin: 0;
+}
+.modal .headline,
+.modal .heart-link {
+  justify-self: center;
+  font-size: 2rem;
+}
+.modal .heart-link,
+.modal .heart-link:hover,
+.modal .heart-link:focus {
+  color: #fa6ebb;
+  align-self: center;
+}
+.modal-close {
+  font-size: 2rem;
+  cursor: pointer;
+  margin: 0;
+  justify-self: self-end;
+}
+.modal-close:hover {
+  color: #4A94A8;
+}
+.modal-catGroup {
+  padding: 0.5em;
+}
+.modal-catName {
+  margin: 0.2em 0.2em 0 0.2em;
+  font-size: 2rem;
+}
+.modal-catInfo {
+  font-size: 0.75rem;
+}
+.modal-image {
+  max-width: 100px;
+  border-radius: 15px;
+  padding: 0.6em;
+}
+.modal-catHeader {
+  display: flex;
+}
+
+.filter-headline {
+  font-size: 1.25rem;
+  color: #4A94A8;
+  margin: 0;
+}
+
+.filter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+.filter-form .checkbox {
+  padding-left: 0.3em;
+}
+
+.checkbox-container {
+  padding: 0.5em;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer {
+  background-color: #4d4764;
+  padding: 0.5em;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  z-index: 1;
+  position: sticky;
+}
+.footer-content {
+  color: #E2D9CA;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.055em;
+}
+.footer-link {
+  text-decoration: none;
+  color: #E2D9CA;
+  border-bottom: 1px solid #4A94A8;
+}
+.footer-link:hover, .footer-link:focus {
+  font-weight: 700;
+}
+
+.sidebar-style {
+  background-color: #4d4764;
+  z-index: 1;
+  grid-area: nav;
+}
+
+/*  react transition group uses these to animate */
+.sidebar-enter {
+  transform: translateX(-1000px);
+}
+
+.sidebar-enter-active {
+  transform: translateX(0);
+  transition: transform 0.3s;
+}
+
+.sidebar-exit {
+  transform: translateX(0px);
+}
+
+.sidebar-exit-active {
+  transform: translateX(-1000px);
+  transition: transform 0.3s;
+}
+
+.sidebar-arrow, .sidebar-close {
+  font-size: 2rem;
+  padding: 0.5em 0 0 0.5em;
+}
+.sidebar-arrow:hover, .sidebar-close:hover {
+  color: #4A94A8;
+  cursor: pointer;
+}
+
+.card--cat-name {
+  font-weight: 700;
+  margin: 0.5em 0 0 0;
+}
+.card--title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.75rem;
+  align-items: center;
+}
+.card--cat-location {
+  margin: 0.5em 0;
+  font-size: 0.75rem;
+}
+.card--cat-desc {
+  margin-top: 0.75em;
+}
+
+form input,
+form button {
+  padding: 0.5em;
+  background-color: #E2D9CA;
+  color: #4d4764;
+  border: none;
+  border-radius: 10px;
+  margin: 0.3em;
+  font-family: "Outfit";
+  align-self: center;
+  cursor: pointer;
+}
+form button:hover {
+  background-color: #4A94A8;
+  color: #E2D9CA;
+  font-weight: 700;
+}
+form .location-marker {
+  color: #4A94A8;
+  font-size: 1.5rem;
+  margin-right: 0.5em;
+}
+
+/*# sourceMappingURL=style.css.map */
